@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    
+    <script src="lightbox/js/jquery-1.11.0.min.js"></script>
+    <script src="lightbox/js/lightbox.min.js"></script>
+    <link href="lightbox/css/lightbox.css" rel="stylesheet"/>
+    
+    <title>Web Design Game</title>
+    <link href="/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheets" type="text/css" href="/stylesheets/style.css"/>
+    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/jquery.hotkeys.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/key_status.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/util.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/sprite.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/sound.js" type="text/javascript"></script>
+    
+    <script language="javascript" src="player.js" type="text/javascript"></script>
+    <script language="javascript" src="enemy.js" type="text/javascript"></script>
+    <script language="javascript" src="game.js" type="text/javascript"></script>
+    <script 
+            ="javascript" src="timer.js" type="text/javascript"></script>
+    
+  
+   
+</head>
+    <body style="background-image: url('geometry2.png'); overflow:hidden">
+  
+            
+                <center>
+                
+                <div style="width:500px;">
+                    <div id="levelDiv" class="level" style="float: left; width: 100px; margin-top:10px;"></div>
+                    <a href="index.html"><img height="50px" width="50px" src="refresh.png" alt="Restart?"></a>
+                    <a href="lightbox/img/image-1.png" data-lightbox="image-1" data-title=""><img height="55px" width="55px" src="tutorial.png" alt="Restart?"></a>
+
+                    <div id="textDiv" class="score" style="float: right; width: 100px; margin-top:10px;"></div>
+                    <br style="clear: left;" />
+                </div>
+                </center>
+                
+                <div style="width: 100px;"; class="level" id="levelDiv"></div>
+            <div class="score" id="textDiv" style="margin-top: 5px;"></div> 
+            
+            <div class="game" id="game"></div>
+            
+                
+            
+            <audio autoplay="true" loop="loop">
+            <source src="sounds/PopSong.ogg" type="audio/ogg" />
+            <source src="sounds/PopSong.mp3" type="audio/mpeg"/>
+            </audio>
+            
+        
+            <script type ="text/javascript">
+                
+             
+            var enemySpawned = 0;
+            var level = 1;
+            
+            //Making The Game Harder
+                
+            var difficulty = 0.01;
+            var enemySpeed = -2;
+            var death = false;
+            
+            //Creating the Canvas
+            var CANVAS_WIDTH =innerWidth - 100;
+            var CANVAS_HEIGHT = innerHeight -100;
+            
+
+            var canvasElement = $("<canvas width='" + CANVAS_WIDTH +
+                "' height='" + CANVAS_HEIGHT + "'></canvas>");
+            var canvas = canvasElement.get(0).getContext("2d");
+            
+            canvas.color = "#FF0000";
+            
+            canvasElement.appendTo('.game');
+            
+            
+         
+        </script>
+    </body>
+</html>

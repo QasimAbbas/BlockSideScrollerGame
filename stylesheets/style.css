@@ -1,0 +1,28 @@
+#game
+{
+    border:2px solid;
+    border-radius:25px;
+    background-image:url('geometry2.png');
+}
+
+body{
+
+
+}
+
+
+.level{
+    
+    font-family:fantasy; 
+    font-size: 18pt;
+    width: 20px;
+    height: 18;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mid{
+    
+    background-color: #cdced9;   
+}
